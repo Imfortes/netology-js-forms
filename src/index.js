@@ -1,3 +1,10 @@
-import './css/style.css';
-import './js/app';
-// TODO: write your code in app.js
+import "./css/style.css";
+import Popover from "./js/app.js";
+
+// import Popover from './js/app.js'
+
+console.log("App started");
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Popover();
+});

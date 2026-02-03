@@ -1,61 +1,93 @@
-p {
-    color: black;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-form {
-    margin-top: 200px;
+.wrapper {
+  width: clamp(400px, 50vw, 1000px);
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-:invalid {
-    /* border: 1px solid red; */
+.container {
+  margin: 1rem 0;
 }
 
-.input {
-    display: inline-block;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.btn {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    border: 1px solid #ced4da;
+.grid-col {
+  display: grid;
+  gap: 1rem;
 }
 
-.form-control {
-    position: relative;
-    margin-bottom: 5px;
+.grid-col-4 {
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
 }
 
-.form-error {
+.grid-col-6 {
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+img.active {
+  filter: grayscale(0)
+}
+
+.popover {
   position: absolute;
-  padding: 5px 10px;
-  width: 200px;
+  display: block;
+  max-width: 200px;
+  padding: 0.5rem;
   background: #fff;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.1);
+  z-index: 1000;
 }
 
-.popover-active {
-    position: relative;
+.popover-arrow {
+  position: absolute;
+  width: 1rem;
+  height: 0.5rem;
+  background: inherit;
+  transform: rotate(45deg);
 }
 
-.popover-active::after {
-    position: absolute;
-    content: '';
-    width: clamp(150px, 10vw, 300px);
-    height: fit-content;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+.popover-header {
+  font-weight: 500;
+  padding: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.popover-body {
+  padding: 0.5rem;
 }
